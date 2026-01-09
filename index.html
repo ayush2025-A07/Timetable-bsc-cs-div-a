@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mobile Timetable</title>
+
+<style>
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#f4f6fb;
+}
+.header{
+    background:linear-gradient(135deg,#7f9cf5,#b794f4);
+    color:white;
+    padding:18px;
+    text-align:center;
+}
+.container{padding:15px;}
+.day{
+    background:white;
+    border-radius:14px;
+    padding:12px;
+    margin-bottom:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.08);
+}
+.day h3{
+    margin:0 0 10px;
+    color:#4f46e5;
+    border-bottom:2px solid #eef2ff;
+    padding-bottom:5px;
+}
+.slot{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:10px;
+    margin-bottom:8px;
+    border-radius:10px;
+    font-size:14px;
+}
+.time{font-weight:bold;color:#334155;}
+
+/* Subject Colors (one color per subject) */
+.ds{background:#fde68a;}
+.lab-ds{background:#fde68a;}
+.dbms{background:#fcd34d;}
+.micro{background:#86efac;}
+.lab-micro{background:#86efac;}
+.lab-fcs{background:#fca5a5;}
+.peace{background:#fef08a;}
+.yoga{background:#c7d2fe;}
+.break{background:#e5e7eb;font-weight:bold;}
+.iks{background:#fd8ae4;}
+</style>
+</head>
+
+<body>
+<div class="header">
+<h2>Week Timetable</h2>
+<p>F.Y BSC.CS DIV-A</p>
+</div>
+
+<div class="container">
+
+<div class="day">
+<h3>Monday</h3>
+<div class="slot ds"><span class="time">9–10</span> DS (VM)</div>
+<div class="slot dbms"><span class="time">10–11</span> DBMS (MB)</div>
+<div class="slot break"><span class="time">11–12</span> BREAK</div>
+<div class="slot lab-fcs"><span class="time">12–2</span> FCS Lab A1 (VY528)</div>
+<div class="slot micro"><span class="time">2–3</span> Micro (VS)</div>
+</div>
+
+<div class="day">
+<h3>Tuesday</h3>
+<div class="slot ds"><span class="time">9–10</span> DS (VM)</div>
+<div class="slot micro"><span class="time">10–11</span> Micro (VS)</div>
+<div class="slot break"><span class="time">11–12</span> BREAK</div>
+<div class="slot lab-ds"><span class="time">12–2</span> DS Lab A1, A2 (VY428)</div>
+<div class="slot lab-micro"><span class="time">2–4</span> Micro Lab A1 (VY422)</div>
+<div class="slot lab-fcs"><span class="time">2–4</span> FCS Lab A2 (VY427)</div>
+</div>
+
+<div class="day">
+<h3>Wednesday</h3>
+<div class="slot ds"><span class="time">9–10</span> DS (VM)</div>
+<div class="slot peace"><span class="time">10–11</span> Peace (MK)</div>
+<div class="slot break"><span class="time">11–12</span> BREAK</div>
+<div class="slot lab-micro"><span class="time">12–2</span> Micro Lab A1 (VY422)</div>
+<div class="slot yoga"><span class="time">2–4</span> Yoga</div>
+</div>
+
+<div class="day">
+<h3>Thursday</h3>
+<div class="slot dbms"><span class="time">9–10</span> DBMS (MB)</div>
+<div class="slot peace"><span class="time">10–11</span> Peace (MK)</div>
+<div class="slot break"><span class="time">11–12</span> BREAK</div>
+<div class="slot lab-fcs"><span class="time">12–2</span> FCS Lab A1 (VY427)</div>
+<div class="slot lab-fcs"><span class="time">2–4</span> FCS Lab A2 (VY427)</div>
+</div>
+
+<div class="day">
+<h3>Friday</h3>
+<div class="slot iks"><span class="time">8–10</span> IKS</div>
+<div class="slot dbms"><span class="time">10–11</span> DBMS (MB)</div>
+<div class="slot break"><span class="time">11–12</span> BREAK</div>
+<div class="slot dbms"><span class="time">12–2</span> DBMS Lab A1 & A2 (VY426)</div>
+<div class="slot micro"><span class="time">2–3</span> Micro (VS)</div>
+</div>
+
+</div>
+</body>
+</html>
