@@ -140,7 +140,7 @@
             flex: 1;
             overflow-y: auto;
             padding: 20px;
-            padding-bottom: calc(90px + var(--safe-bottom)); /* Extra padding for FAB */
+            padding-bottom: calc(20px + var(--safe-bottom));
             -webkit-overflow-scrolling: touch;
         }
 
@@ -233,31 +233,6 @@
         
         .type-peace { border-left-color: var(--color-peace); }
         .type-peace .subject { color: var(--color-peace); }
-
-        /* Floating Download Button (FAB) */
-        .fab-download {
-            position: fixed;
-            bottom: calc(25px + var(--safe-bottom));
-            right: 25px;
-            background-color: var(--text-dark);
-            color: white;
-            border: none;
-            width: 56px;
-            height: 56px;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            cursor: pointer;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            transition: transform 0.2s;
-        }
-        
-        .fab-download:active {
-            transform: scale(0.9);
-        }
 
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(15px); }
@@ -411,10 +386,6 @@
 
     </div>
 
-    <button class="fab-download" onclick="downloadPage()" title="Download HTML">
-        ⬇
-    </button>
-
     <script>
         function showDay(dayId) {
             // Hide all schedules
@@ -443,17 +414,6 @@
             }
         }
 
-        function downloadPage() {
-            const htmlContent = document.documentElement.outerHTML;
-            const blob = new Blob([htmlContent], { type: 'text/html' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'My_Schedule.html';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-
         // Auto-detect current day on load
         window.onload = function() {
             const d = new Date();
@@ -471,3 +431,5 @@
 
 </body>
 </html>
+</html>
+
